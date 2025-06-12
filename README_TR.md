@@ -369,7 +369,7 @@ Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için [LICENSE](LICE
 
 Proje Sahibi: [@LeatherFire](https://github.com/LeatherFire)
 
-Proje Linki: [https://github.com/LeatherFire/Muhasebe-Yonetim-Sistemi](https://github.com/LeatherFire/Muhasebe-Yonetim-Sistemi)
+Proje Linki: [https://github.com/LeatherFire/Muhasebe-Y-netim-Sistemi](https://github.com/LeatherFire/Muhasebe-Y-netim-Sistemi)
 
 ---
 

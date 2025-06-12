@@ -369,7 +369,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 Project Owner: [@LeatherFire](https://github.com/LeatherFire)
 
-Project Link: [https://github.com/LeatherFire/Muhasebe-Yonetim-Sistemi](https://github.com/LeatherFire/Muhasebe-Yonetim-Sistemi)
+Project Link: [https://github.com/LeatherFire/Muhasebe-Y-netim-Sistemi](https://github.com/LeatherFire/Muhasebe-Y-netim-Sistemi)
 
 ---
 
