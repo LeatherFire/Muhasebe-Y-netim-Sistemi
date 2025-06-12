@@ -1,0 +1,66 @@
+# Muhasebe Yönetim Sistemi - Başlatma Komutları
+
+## Gereksinimler
+- Python 3.8+ (backend için)
+- Node.js 18+ (frontend için)
+- MongoDB (yerel veya cloud)
+
+## Backend Başlatma
+
+### 1. Backend klasörüne git
+cd /Users/leatherfire/MuhasebeYonetim/backend
+
+### 2. Virtual environment'ı aktif et (eğer yoksa oluştur)
+python -m venv venv
+source venv/bin/activate  # macOS/Linux için
+# Windows için: venv\Scripts\activate
+
+### 3. Dependencies'leri yükle
+pip install -r requirements.txt
+
+### 4. MongoDB bağlantısını kontrol et
+# .env dosyasında MONGODB_URL ayarlarını kontrol edin
+
+### 5. Backend'i başlat
+uvicorn main:app --reload --host 0.0.0.0 --port 8000
+
+# VEYA
+python -m uvicorn main:app --reload --host 0.0.0.0 --port 8000
+
+## Frontend Başlatma
+
+### 1. Yeni terminal açın ve frontend klasörüne git
+cd /Users/leatherfire/MuhasebeYonetim/frontend
+
+### 2. Dependencies'leri yükle (sadece ilk kez)
+npm install
+
+### 3. Frontend'i başlat
+npm run dev
+
+## Erişim Bilgileri
+- Frontend: http://localhost:3000
+- Backend API: http://localhost:8000
+- API Docs: http://localhost:8000/docs
+
+## Not
+- Backend'i her zaman önce başlatın
+- MongoDB'nin çalıştığından emin olun
+- Her iki sistem de çalışır durumda olmalı
+
+## Sistem Özellikleri
+✅ Kullanıcı girişi ve yetkilendirme
+✅ Banka hesap yönetimi
+✅ Ödeme emirleri
+✅ İşlem takibi
+✅ Kişi/Kurum yönetimi (otomatik ekleme)
+✅ Borç takibi
+✅ Çek yönetimi
+✅ Kredi kartı takibi
+✅ Raporlar ve dashboard
+✅ Gelir takibi ve projeksiyonlar
+✅ AI servisleri entegrasyonu
+
+## Varsayılan Kullanıcı
+- Email: admin@example.com
+- Şifre: admin123

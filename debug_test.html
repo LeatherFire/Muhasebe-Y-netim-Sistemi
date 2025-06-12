@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>API Test</title>
+</head>
+<body>
+    <h1>API Test</h1>
+    <button onclick="testLogin()">Test Login</button>
+    <button onclick="testIncomeRecords()">Test Income Records</button>
+    <div id="result"></div>
+
+    <script>
+        let token = null;
+        
+        async function testLogin() {
+            try {
+                const formData = new FormData();
+                formData.append('username', 'admin');
+                formData.append('password', 'admin123');
+                
+                const response = await fetch('http://localhost:8000/auth/login', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const data = await response.json();
+                token = data.access_token;
+                document.getElementById('result').innerHTML = 'Login successful: ' + JSON.stringify(data);
+            } catch (error) {
+                document.getElementById('result').innerHTML = 'Login error: ' + error.message;
+            }
+        }
+        
+        async function testIncomeRecords() {
+            if (!token) {
+                await testLogin();
+            }
+            
+            try {
+                const formData = new FormData();
+                formData.append('company_name', 'Test Company');
+                formData.append('amount', '1000');
+                formData.append('currency', 'TRY');
+                formData.append('bank_account_id', 'test123');
+                formData.append('income_date', '2024-06-06');
+                formData.append('description', 'Test income');
+                
+                const response = await fetch('http://localhost:8000/income-records/', {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': 'Bearer ' + token
+                    },
+                    body: formData
+                });
+                
+                const data = await response.json();
+                document.getElementById('result').innerHTML = 'Income Records response: ' + JSON.stringify(data);
+            } catch (error) {
+                document.getElementById('result').innerHTML = 'Income Records error: ' + error.message;
+            }
+        }
+    </script>
+</body>
+</html>
